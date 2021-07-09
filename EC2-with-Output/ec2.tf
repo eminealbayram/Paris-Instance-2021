@@ -13,3 +13,5 @@ resource "aws_instance" "web" {
     Team      = "DevOps"
   }
 }
+#this is dynamic code
+
