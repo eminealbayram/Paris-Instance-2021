@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
   key_name                    = aws_key_pair.test_key.key_name
   user_data                   = file("user_data.sh")
   tags = {
-    Name      = "Web ${count.index + 1}"
+    Name      = "Web ${count.index + 1}" #automatically gives names to the instances starting from 1.
     CreatedBy = "Engineer"
     Team      = "DevOps"
   }
