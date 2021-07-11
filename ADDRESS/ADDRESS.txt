@@ -1,0 +1,8 @@
+export STREET="Susam"
+export ADDRESS="123"
+export CITY="Istanbul"
+export STATE="Marmara"
+export ZIP="34100"
+
+#source ADDRESS.txt  (run this command first)
+#echo "He lives at $ADDRESS $STREET $STATE $CITY $ZIP" (then run this command)
