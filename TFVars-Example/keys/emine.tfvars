@@ -1,5 +1,5 @@
 region     = "eu-west-3"
-key_name   = "chocolate"
+key_name   = "emine"
 public_key = "~/.ssh/id_rsa.pub"
 
 
