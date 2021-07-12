@@ -8,4 +8,5 @@ key_tags = {
     Env = "Dev"
     Team = "DevOps"
 }
-#terraform apply -var-file keys/emine.tfvars
+#terraform apply -var-file keys/emine.tfvars 
+#in order to create emine key-name

@@ -8,4 +8,5 @@ key_tags = {
     Env = "Dev"
     Team = "DevOps"
 }
-#terraform apply -var-file keys/sam.tfvars
+#terraform apply -var-file keys/sam.tfvars 
+#in order to create sam key-name

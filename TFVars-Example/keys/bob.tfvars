@@ -8,4 +8,5 @@ key_tags = {
     Env = "Dev"
     Team = "DevOps"
 }
-#terraform apply -var-file keys/bob.tfvars
+#terraform apply -var-file keys/bob.tfvars 
+#in order to create bob key-name
