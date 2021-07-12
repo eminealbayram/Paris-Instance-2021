@@ -1,7 +1,6 @@
 region        = "eu-west-3"
 key_name      = "emine"
 instance_type = "t3.micro"
-region = "eu-west-3"
 public_key = "~/.ssh/id_rsa.pub"
 
 
