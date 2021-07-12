@@ -12,6 +12,6 @@ variable "public_key" {
 }
 
 variable "key_tags" {
-    type = "map"
+    type = map
     description = "Please provide your tags"
 }
