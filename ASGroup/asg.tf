@@ -1,4 +1,4 @@
-resource "aws_autoscaling_group" "example" {
+resource "aws_autoscaling_group" "NodeJSAPP_ASG" {
   availability_zones = data.aws_availability_zones.all.names
   desired_capacity   = 3
   max_size           = 99
@@ -6,7 +6,7 @@ resource "aws_autoscaling_group" "example" {
   mixed_instances_policy {
     launch_template {
       launch_template_specification {
-        launch_template_id = aws_launch_template.example.id
+        launch_template_id = aws_launch_template.NodeJSAPP_LT.id
       }
       override {
         instance_type     = "c4.large"
@@ -15,3 +15,15 @@ resource "aws_autoscaling_group" "example" {
       override {
         instance_type     = "c3.large"
         weighted_capacity = "2"
+      }
+    }
+  }
+}
+
+
+
+tags =  {
+  Team        = "DevOps"
+  Environment = "Dev"
+  Application = "NodeJS"
+}

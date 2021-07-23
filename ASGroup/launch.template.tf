@@ -1,8 +1,15 @@
-resource "aws_launch_template" "example" {
-  name_prefix          = "example"
+resource "aws_launch_template" "NodeJSAPP_LT" {
+  name_prefix          = "NodeJSAPP_LT"
   image_id             = data.aws_ami.image.id
-  instance_type        = "c5.large"
-  security_group_names = [aws_security_group.asg-sec-group.name]
-  key_name             = aws_key_pair.asg-key-pair.key_name
+  instance_type        = "t2.micro"
+  key_name             = aws_key_pair.laptop.key_name
   user_data            = filebase64("${path.module}/userdata.sh")
+  tags = {
+    Team        = "DevOps"
+    Environment = "Dev"
+    Application = "NodeJS"
+    Market      = "US"
+  }
+
 }
+
