@@ -4,26 +4,22 @@ resource "aws_autoscaling_group" "NodeJSAPP_ASG" {
   max_size           = 99
   min_size           = 3
   mixed_instances_policy {
-    launch_template {
+    instances_distribution {
+      on_demand_base_capacity                  = 50
+      on_demand_percentage_above_base_capacity = 50
+      spot_allocation_strategy                 = "capacity-optimized"
+    }
+  
+  launch_template {
       launch_template_specification {
         launch_template_id = aws_launch_template.NodeJSAPP_LT.id
       }
-      override {
-        instance_type     = "c4.large"
-        weighted_capacity = "3"
-      }
-      override {
-        instance_type     = "c3.large"
-        weighted_capacity = "2"
-      }
-    }
+  } 
+
+  tags = {
+    Team        = "DevOps"
+    Environment = "Dev"
+    Application = "NodeJS"
   }
 }
 
-
-
-tags =  {
-  Team        = "DevOps"
-  Environment = "Dev"
-  Application = "NodeJS"
-}
