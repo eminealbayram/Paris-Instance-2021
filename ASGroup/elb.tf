@@ -1,5 +1,5 @@
 resource "aws_elb" "NodeJSAPP_LB" {
-  name               = "foobar-terraform-elbs"
+  name               = "NodeJSAPP-LB"
   availability_zones = data.aws_availability_zones.all.names
   listener {
     instance_port     = 80
